@@ -1,16 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+import App from './App'
+import PrivacyPolicy from './PrivacyPolicy'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+  },
+  {
+    path: '/privacy',
+    element: <PrivacyPolicy />,
   },
 ])
 
