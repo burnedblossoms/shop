@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid, GridItem } from '@chakra-ui/react'
+import './App.css'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Grid
+      templateAreas='"header header" "nav main" "nav footer"'
+      gridTemplateRows='0.25fr 1fr 30px' // header + content + footer heights
+      gridTemplateColumns='0.25fr 1fr' // nav + content widths
+      h='100vh'
+      gap='1'
+      color='blackAlpha.700'
+      fontWeight='bold'
+    >
+      <GridItem pl='2' bg='orange.300' area={'header'}>
+        Header
+      </GridItem>
+      <GridItem pl='2' bg='pink.300' area={'nav'}>
+        Nav
+      </GridItem>
+      <GridItem pl='2' bg='green.300' area={'main'}>
+        Main
+      </GridItem>
+      <GridItem pl='2' bg='blue.300' area={'footer'}>
+        Footer
+      </GridItem>
+    </Grid>
+  )
 }
-
-export default App;
