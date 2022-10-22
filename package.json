@@ -1,7 +1,7 @@
 {
   "name": "shop",
   "version": "0.1.0",
-  "homepage": "https://burnedblossoms.github.io/shop",
+  "homepage": "https://burnedblossoms.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "2.0.11",
